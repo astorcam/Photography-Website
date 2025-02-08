@@ -1,0 +1,200 @@
+
+/* Elimina márgenes y rellenos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  :root {
+    --primary-color: #fff7f8ff;      /* Color principal */
+    --secondary-color: rgb(245, 243, 241); /* Color secundario */
+    --special-color: #869b81; 
+    --text-color: #2b2a2cff;         /* Color del texto */
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+  }
+
+  header {
+    background: linear-gradient(to bottom , var(--secondary-color) 0%,var(--primary-color));
+    color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInAnimation 1.5s ease-in forwards;
+
+  }
+  .navigation {
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Distribuye a los extremos */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 20px; /* Espaciado */
+    color:var(--text-color)
+        
+}
+.nav-left-cell {
+    flex: 1; /* Ocupa espacio a la izquierda */
+    text-align: left;
+    white-space: nowrap;
+    font-weight: bold;    
+}
+
+.nav-center-cell {
+    flex: 1; /* Ocupa espacio en el centro */
+    text-align: center;
+}
+.nav-center-cell h1 a{
+    margin: 0;
+    font-size: 70px;
+    font-family: "Big Shoulders Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    white-space: nowrap;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-right-cell {
+    flex: 1; /* Ocupa espacio a la derecha */
+    text-align: right;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.nav-left-cell a, .nav-right-cell a {
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+}
+.submenu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* background: var(--secondary-color); */
+    padding: 5px 0;
+    list-style: none;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    z-index: 100; /* Para que no se quede detrás de otros elementos */
+}
+
+.submenu li {
+    padding: 8px 15px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown:hover .submenu {
+    display: block; /* Se muestra cuando pasas el mouse */
+}
+
+.carousel-container {
+    width: 90%; /* Ajusta el ancho del carrusel */
+    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    padding: 20px; /* Espaciado interno opcional */
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+}
+.container-about{
+    width: 90%; /* Ajusta el ancho del carrusel */
+    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    padding: 20px; /* Espaciado interno opcional */
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+}
+
+.col-13 {
+    width: 70%; 
+    margin: 20px auto; /* Margen superior e inferior de 20px y centrado */
+    display: flex;
+    justify-content: space-between ;
+    padding: 10px 10px; /* Espaciado */
+    
+
+}
+.col-13 img {
+    max-width: 60%; /* Hace que la imagen no se desborde del contenedor */ 
+    object-fit: contain;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+
+}
+.col-13 p {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: start;
+    margin: 10px;
+    padding: 0px;
+}
+
+.col-14 {
+    width: 80%; 
+    margin: 20px auto; /* Margen superior e inferior de 20px y centrado */
+    display: flex;
+    padding: 10px 10px; /* Espaciado */
+
+}
+
+.col-14 img {
+    display: flex;
+    max-width: 100%; /* Hace que la imagen no se desborde del contenedor */ 
+    object-fit: contain;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+footer {
+    background: linear-gradient(to top  , var(--secondary-color) 0%,var(--primary-color));
+    color: var(---text-color);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* COLOR PALETTE CSS HEX 
+--sandy-brown: #f7934cff;
+--raisin-black: #2b2a2cff;
+--wenge: #695958ff;
+--snow: #fff7f8ff;
+--cambridge-blue: #869b81ff; */
