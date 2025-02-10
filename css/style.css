@@ -9,7 +9,7 @@
 
   :root {
     --primary-color: #fff7f8ff;      /* Color principal */
-    --secondary-color: rgb(223, 223, 223); /* Color secundario */
+    --secondary-color: rgba(248, 248, 248, 0.856); /* Color secundario */
     --special-color: #869b81; 
     --text-color: #2b2a2cff;         /* Color del texto */
   }
@@ -115,8 +115,8 @@
 }
 
 .carousel-container {
-    width: 70%; /* Ajusta el ancho del carrusel */
-    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    width: 60%; /* Ajusta el ancho del carrusel */
+    margin: 0px auto; /* Margen superior e inferior de 50px y centrado */
     padding: 20px; /* Espaciado interno opcional */
     opacity: 0;
     animation: fadeInAnimation 2s ease-in forwards;
@@ -130,7 +130,7 @@
 
 }
 
-.col-13 {
+.perfil {
     width: 70%; 
     margin: 20px auto; /* Margen superior e inferior de 20px y centrado */
     display: flex;
@@ -140,14 +140,14 @@
     
 
 }
-.col-13 img {
+.perfil img {
     max-width: 60%; /* Hace que la imagen no se desborde del contenedor */ 
     object-fit: contain;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 
 
 }
-.col-13 p {
+.perfil p {
     font-size: 20px;
     font-weight: lighter;
     text-align: start;
@@ -155,7 +155,7 @@
     padding: 0px;
 }
 
-.col-14 {
+.banner {
     width: 80%; 
     margin: 20px auto; /* Margen superior e inferior de 20px y centrado */
     display: flex;
@@ -166,12 +166,12 @@
     transition: opacity 2s ease-out, transform 2s ease-out !important;
 
 }
-.col-14.visible{
+.banner.visible{
     opacity: 1;
     transform: translateY(0);
 }
 
-.col-14 img {
+.banner img {
     display: block;
     max-width: 100%; /* Hace que la imagen no se desborde del contenedor */ 
     object-fit: contain;
@@ -229,6 +229,27 @@
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
 }
+
+.photo-gallery {
+    max-width: 70%; 
+    margin: 0 auto; 
+    padding: 10px; 
+    place-items: center; 
+}
+
+.photo-gallery .row {
+    margin: 20px auto; /* space between rows */
+    place-items: center; 
+}
+
+.photo-gallery img {
+    max-width: 80%;
+    height: auto; 
+    object-fit: contain; 
+}
+
+
+
 
 
 footer {
