@@ -246,10 +246,19 @@
     max-width: 80%;
     height: auto; 
     object-fit: contain; 
+    
 }
 
+.row:has(img[alt="photo-gallery"]) {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
 
-
+.row:has(img[alt="photo-gallery"]).visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 footer {
