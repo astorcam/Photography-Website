@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asier Astorquiza</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">    </head>
+
+    <header>
+        <nav class="navigation">
+            <div class="nav-left-cell">
+                <ul class="menu">
+                    <li class="dropdown">Work
+                        <ul class="submenu">
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="./videos.html">Videos</a></li>
+                        </ul>
+                    </li> 
+                </ul>               
+            </div>    
+            <div class="nav-center-cell">
+                <h1><a href="./index.html">ASIER ASTORQUIZA</a></h1>
+            </div>  
+            <div class="nav-right-cell">
+                <ul class="menu">
+                    <li class="dropdown">Menu
+                        <ul class="submenu">
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </li> 
+                </ul>     
+            </div>   
+        </nav>
+    </header> 
+    <body>
+    <main>
+        <div class="container-about">
+            <div class="row">
+                <div class="photo-gallery" id="photo-gallery">
+                <script>
+                    const photos = [
+                    "13A_0637.JPG",
+                    "24A_00_1.jpg",
+                    "Asier-41.jpg",
+                    "Asier-45.jpg",
+                    "Asier-57.jpg",
+                    "azkorri_ama.jpg",
+                    "DSCF6110.JPG",
+                    "DSCF6128.JPG",
+                    "DSCF6257.JPG",
+                    "DSCF6446.jpg",
+                    "DSCF6915.jpg",
+                    "DSCF8175.jpg",
+                    "DSCF8272.jpg",
+                    "DSCF8355.jpg",
+                    "DSCF8364.jpg",
+                    "DSCF8469.jpg",
+                    "DSCF8579.jpg",
+                    "DSCF8584-Editar.jpg",
+                    "DSCF8635.jpg",
+                    "DSCF8748.jpg",
+                    "DSCF8819.jpg",
+                    "DSCF8883.jpg",
+                    "DSCF9011.jpg",
+                    "DSCF9222.jpg",
+                    "DSCF9267.jpg",
+                    "DSCF9326.jpg",
+                    "DSCF9339-Editar-2.jpg",
+                    "DSCF9394.jpg",
+                    "DSCF9414.jpg",
+                    "DSCF9436.jpg",
+                    "DSCF9482.jpg",
+                    "DSCF9483.jpg",
+                    "DSCF9489.jpg",
+                    "DSCF9503.jpg",
+                    "DSCF9510.jpg",
+                    "F1000001 (2).JPG",
+                    "F1000001.JPG",
+                    "F1000006.JPG",
+                    "F1000013.JPG",
+                    "F1000014.JPG",
+                    "F1000026.JPG",
+                    "F1000027.JPG",
+                    "F1000028.JPG",
+                    "img322-2.jpg",
+                    "Foto_playa-19.jpg",
+                    "París y amama-11.jpg",
+                    "sca908.jpg",
+                    "Suecia y Bilbao-13.jpg",
+                    "Suecia y Bilbao-26.jpg",
+                    "Suecia y Bilbao-29.jpg",
+                    "Suecia y Bilbao-49.jpg",
+                    "Suecia y Bilbao-60.jpg",
+                    "Suecia y Bilbao-64.jpg",
+                    "_18_1710.jpg",
+                    "_8A_00_1.jpg",
+                    "_8A_0700.JPG",
+                    "__5_1546.JPG",
+                    "____0072.jpg"
+                    ];
+                
+                    const gallery = document.getElementById("photo-gallery");
+                    let rowDiv = document.createElement("div");
+                    rowDiv.classList.add("row");
+
+                    photos.forEach((photo, index) => {
+                        const colDiv = document.createElement("div");
+                        colDiv.classList.add("col-12", "col-md-6");
+                        const imgElement = document.createElement("img");
+                        imgElement.src = "assets/img/personal/" + photo;
+                        imgElement.classList.add("img-fluid");
+                        imgElement.alt = "photo-gallery";
+                        colDiv.appendChild(imgElement);
+                        rowDiv.appendChild(colDiv);
+
+                        if ((index + 1) % 2 === 0 || index === photos.length - 1) { //after 2 photos, new row
+                            gallery.appendChild(rowDiv);
+                            rowDiv = document.createElement("div");
+                            rowDiv.classList.add("row");
+                        }
+                    });
+                </script>
+                </div>
+            </div>
+        </div>
+    </main>  
+    <script src="./js/scripts.js"></script>
+    <script src="./js/photo-gallery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body>
+<footer>
+    <p>&copy; 2025 - Asier Astorquiza</p>
+</footer>
+</html>

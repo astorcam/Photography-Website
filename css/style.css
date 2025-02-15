@@ -4,7 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
   }
 
   :root {
@@ -18,7 +20,9 @@
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    padding-top: 100px;
   }
+  
   .container {
     width: 80%;
     margin: auto;
@@ -26,15 +30,17 @@
   }
 
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
     margin: 0 auto;
     background: linear-gradient(to bottom , var(--secondary-color) 0%,var(--primary-color));
     color: var(--primary-color);
-    padding: 20px;
     text-align: center;
     opacity: 0;
     animation: fadeInAnimation 1.5s ease-in forwards;
-    max-width: 100%;
-
+    width: 100%;
+    z-index: 1000; /* Mantiene el header por encima del contenido */
   }
   .navigation {
     
@@ -107,7 +113,25 @@
 .submenu li a {
     text-decoration: none;
     color: black;
-    display: block;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.submenu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Ajusta la posición del subrayado */
+    width: 0;
+    height: 1px; /* Grosor del subrayado */
+    background-color: var(--text-color); 
+    transition: width 0.7s ease-in-out; /* Hace el subrayado lento */
+}
+
+.submenu li a:hover::after {
+    width: 100%; /* Hace que el subrayado se extienda lentamente */
+   
 }
 
 .dropdown:hover .submenu {
@@ -258,6 +282,95 @@
 .row:has(img[alt="photo-gallery"]).visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.container-contact{
+    width: 90%; /* Ajusta el ancho del carrusel */
+    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    padding: 20px; /* Espaciado interno opcional */
+    opacity: 0;
+    animation: fadeInAnimation 2s ease-in forwards;
+    place-items: center; 
+    
+}
+
+.contact-img{
+    margin-top: 30px auto;
+    max-width: 100%;
+    height: auto; 
+    object-fit: contain; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.form-horizontal{
+    
+    margin-top: 30px auto; 
+    height: auto; 
+    object-fit: contain; 
+    background: rgba(207, 202, 202, 0.315);
+    border-radius: 2%;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-content{
+    margin: 30px auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+.form-content h1{
+    font-family: "Big Shoulders Display", serif !important;
+    font-size: 30px;
+  }
+
+.bi.bi-instagram{
+    margin: 5px;
+    
+}
+.bi.bi-envelope-at-fill{
+    margin: 5px;
+}
+
+.btn.btn-secondary.btn-lg{
+    border: 0;
+    background-color:#869b81;
+    color:rgba(255, 247, 248, 0.767);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.btn.btn-secondary.btn-lg:hover {
+    transform: scale(1.1);
+}
+
+.social-link {
+    display: flex;
+    color: inherit;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    color: inherit;
+}
+
+.video-gallery {
+    max-width: 70%; 
+    margin: 0 auto; 
+    padding: 10px; 
+    place-items: center; 
+}
+
+.video-item {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 315px;
+}
+
+.col-md-8{
+    border:0;
+    background-color:rgba(255, 247, 248, 0.767);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 
