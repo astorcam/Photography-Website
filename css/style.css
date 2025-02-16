@@ -11,7 +11,7 @@
 
   :root {
     --primary-color: #fff7f8ff;      /* Color principal */
-    --secondary-color: rgba(248, 248, 248, 0.856); /* Color secundario */
+    --secondary-color: rgba(233, 233, 233, 0.856); /* Color secundario */
     --special-color: #869b81; 
     --text-color: #2b2a2cff;         /* Color del texto */
   }
@@ -253,6 +253,10 @@
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
 }
+.arrow-icon {
+    margin: auto;
+    fill: var(--text-color); /* Change color if needed */
+}
 .container-photos{
     padding: 0 15px; /* Asegura que el padding es igual */
     width: 100%; /* Ajusta el ancho del carrusel */
@@ -286,9 +290,12 @@
     max-width: 80%;
     height: auto; 
     object-fit: contain; 
-    
-    
+    transition: transform 1s ease-in-out;
 }
+.photo-gallery img:hover {
+    transform: scale(1.03); 
+}
+
 
 .row:has(img[alt="photo-gallery"]) {
     opacity: 0;
@@ -302,13 +309,23 @@
 }
 
 .container-contact{
-    width: 90%; /* Ajusta el ancho del carrusel */
+    width: 80%; /* Ajusta el ancho del carrusel */
     margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
     padding: 20px; /* Espaciado interno opcional */
     opacity: 0;
     animation: fadeInAnimation 2s ease-in forwards;
     place-items: center; 
     
+}
+.container-contact .row {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.container-contact .row .col-12.col-md-6 {
+    margin: auto; /* Centra el contenido */
+    text-align: center; /* Centra el texto */
 }
 
 .contact-img{
@@ -320,27 +337,10 @@
 
 }
 
-.form-horizontal h1{  
-    margin-top: 15px  
-}
-.form-horizontal{
-    
-    margin-top: 30px auto; 
-    height: auto; 
-    object-fit: contain; 
-    background: rgba(207, 202, 202, 0.315);
-    border-radius: 2%;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.form-content{
-    margin: 30px auto;
-    max-width: 90%;
-    max-height: 90%;
-}
-.form-content h1{
+.col-12.col-md-6 h1{
     font-family: "Big Shoulders Display", serif !important;
     font-size: 30px;
+    margin-bottom: 10px;
   }
 
 .bi.bi-instagram{
@@ -387,7 +387,9 @@
     padding: 10px; 
     place-items: center; 
 }
-
+.card-title{
+    font-weight: bold !important;
+}
 .video-item {
     justify-content: center;
     width: 100%;
@@ -401,13 +403,20 @@
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+.card.mb-3{
+    transition: transform 1s ease-in-out !important;
+    border: 0 !important;
+}
 
+.card.mb-3:hover{
+    transform: scale(1.03);
+}
 
 
 footer {
     background: linear-gradient(to top  , var(--secondary-color) 0%,var(--primary-color));
     color: var(---text-color);
-    padding: 20px;
+    padding: 90px;
     text-align: center;
     display: flex;
     flex-direction: column;
