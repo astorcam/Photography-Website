@@ -13,14 +13,21 @@
     --primary-color: #fff7f8ff;      /* Color principal */
     --secondary-color: rgba(233, 233, 233, 0.856); /* Color secundario */
     --special-color: #869b81; 
-    --text-color: #2b2a2cff;         /* Color del texto */
+    --text-color: #2b2a2cff;
+    --bg-color: rgb(243, 239, 239);
   }
-
+html{
+    height: 100%;
+}
   body {
-    background-color: var(--bg-color);
+    background: var(--bg-color) !important;
+    height: 100%;
     color: var(--text-color);
     line-height: 1.6;
     padding-top: 100px;
+  }
+  main{
+    background-color: var(--bg-color);
   }
   
   .container {
@@ -34,7 +41,7 @@
     top: 0;
     left: 0;
     margin: 0 auto;
-    background: linear-gradient(to bottom , var(--secondary-color) 0%,var(--primary-color));
+    background: var(--bg-color);
     color: var(--primary-color);
     text-align: center;
     opacity: 0;
@@ -147,7 +154,7 @@
 }
 .container-about{
     width: 90%; /* Ajusta el ancho del carrusel */
-    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    margin: 0px auto; /* Margen superior e inferior de 50px y centrado */
     padding: 20px; /* Espaciado interno opcional */
     opacity: 0;
     animation: fadeInAnimation 2s ease-in forwards;
@@ -168,8 +175,6 @@
     max-width: 60%; /* Hace que la imagen no se desborde del contenedor */ 
     object-fit: contain;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-
-
 }
 .perfil p {
     font-size: 20px;
@@ -260,7 +265,7 @@
 .container-photos{
     padding: 0 15px; /* Asegura que el padding es igual */
     width: 100%; /* Ajusta el ancho del carrusel */
-    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    margin: 0px auto; /* Margen superior e inferior de 50px y centrado */
     opacity: 0;
     animation: fadeInAnimation 2s ease-in forwards;
     
@@ -310,7 +315,7 @@
 
 .container-contact{
     width: 80%; /* Ajusta el ancho del carrusel */
-    margin: 50px auto; /* Margen superior e inferior de 50px y centrado */
+    margin: 20px auto; /* Margen superior e inferior de 50px y centrado */
     padding: 20px; /* Espaciado interno opcional */
     opacity: 0;
     animation: fadeInAnimation 2s ease-in forwards;
@@ -324,7 +329,7 @@
 }
 
 .container-contact .row .col-12.col-md-6 {
-    margin: auto; /* Centra el contenido */
+    margin: 20px auto; /* Centra el contenido */
     text-align: center; /* Centra el texto */
 }
 
@@ -414,9 +419,10 @@
 
 
 footer {
-    background: linear-gradient(to top  , var(--secondary-color) 0%,var(--primary-color));
+    background: var(--bg-color);
     color: var(---text-color);
-    padding: 90px;
+    padding-top: 80px;
+    padding-bottom: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -434,6 +440,7 @@ footer {
 }
 
 @media (max-width: 992px) {
+    
     .navigation {
         flex-direction: row; /* Stack items vertically */
         align-items: center;
@@ -457,7 +464,7 @@ footer {
 
 @media (max-width: 768px) {
     .nav-center-cell h1 a {
-        font-size: 3.5rem; /* Adjust font size for mobile */
+        font-size: 2.5rem; /* Adjust font size for mobile */
     }
 
     .menu {
@@ -468,6 +475,82 @@ footer {
     .menu > li {
         padding: 5px;
     }
+    .submenu{
+        background:  rgba(243, 239, 239, 0.747);;
+    }
+    .carousel-container{
+        padding-top: 200px;
+        width: 100%;
+    }
+
+    .container-about{
+        margin: 60px auto; /* Margen superior e inferior de 50px y centrado */
+        padding: 0px; /* Espaciado interno opcional */ 
+    }
+    
+    .perfil {
+        width: 90%; 
+        margin: 0px auto; /* Margen superior e inferior de 20px y centrado */      
+    
+    }
+    .perfil p {
+        font-size: 15px;
+        }
+    
+    .banner {
+        width: 100%; 
+        margin: 0px auto; /* Margen superior e inferior de 20px y centrado */
+        display: flex;
+        padding: 30px 10px; /* Espaciado */
+    }
+    .about-1{ 
+        display: flex;
+        max-width: 30%;
+        position: absolute;
+        top: 14%; 
+        left: 12%; 
+        font-size: 10px;
+        color: var(--primary-color);
+    }
+    .about-2{ 
+        display: flex;
+        max-width: 30%;
+        position: absolute;
+        top: 29%; 
+        left: 57%; 
+        font-size: 10px;
+        color: var(--primary-color);
+    }
+    .icono-about-3 { 
+        opacity: 0;
+    }
+    .container-contact .row .col-12.col-md-6 {
+        padding-top: 30px;
+    }
+
+    .container-photos{
+        padding-top: 20px; /* Asegura que el padding es igual */
+    }
+    
+    .photo-gallery {
+        max-width: 100%; 
+        margin: 0 auto; 
+        padding: 10px;      
+    }
+    
+    .photo-gallery .row {
+        margin: 5px auto; /* space between rows */      
+    }
+    
+    .photo-gallery img {
+        max-width: 100%;
+        margin: 5px auto;
+    }
+    .container-videos{
+        width: 100%; 
+        margin: 40px auto; 
+    }
+
 }
 
 /* COLOR PALETTE CSS HEX 
