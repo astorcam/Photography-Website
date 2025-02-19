@@ -17,7 +17,7 @@
                 <ul class="menu">
                     <li class="dropdown">Work
                         <ul class="submenu">
-                            <li><a href="#">Photography</a></li>
+                            <li><a href="./photography.html">Photography</a></li>
                             <li><a href="./videos.html">Videos</a></li>
                         </ul>
                     </li> 
@@ -39,16 +39,20 @@
         </nav>
     </header> 
     <body>
+            <!-- Pantalla de carga -->
+        <div id="preloader">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
     <main>
-        <div class="container-photos">
+        <div class="container-photos" style="display: none;">
             <div class="row">
                 <div class="photo-gallery" id="photo-gallery">
                 <script>
                     const photos = [
                     "13A_0637.JPG",
                     "F1000001.JPG",
-                    "24A_00_1.jpg",
-                    
+                    "24A_00_1.jpg",     
                     "azkorri_ama.jpg",
                     "DSCF8748.jpg",
                     "DSCF6110.JPG",
@@ -92,10 +96,10 @@
                     "Suecia y Bilbao-49.jpg",
                     "Suecia y Bilbao-60.jpg",
                     "Suecia y Bilbao-64.jpg",
-                    "_18_1710.jpg",
-                    "_8A_0700.JPG",
-                    "__5_1546.JPG",
-                    "____0072.jpg"
+                    "18_1710.jpg",
+                    "8A_0700.JPG",
+                    "5_1546.JPG",
+                    "0072.jpg"
                     ];
                 
                     const gallery = document.getElementById("photo-gallery");
