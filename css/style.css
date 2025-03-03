@@ -435,7 +435,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: var(--secondary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,7 +446,7 @@ footer {
 /* Animación del Loader */
 .loader {
     border: 6px solid #f3f3f3;
-    border-top: 6px solid #3498db;
+    border-top: 6px solid #869b81;
     border-radius: 50%;
     width: 50px;
     height: 50px;
