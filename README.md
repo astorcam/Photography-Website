@@ -16,7 +16,7 @@ This is a **photography portfolio website** designed to showcase a gallery of im
 ## 🛠️ Technologies Used  
 - **HTML**  
 - **CSS** (with Bootstrap)  
-- **JavaScript **  
+- **JavaScript**  
 - **GitHub Pages** (for deployment)  
 
 ## 📂 Photography-Website  
