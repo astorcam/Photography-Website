@@ -1,0 +1,2 @@
+CARTE_BCN.jpg	  cartel_gira_2025.jpg	cartel_malaga.jpg   names.txt
+Cartel_gijon.jpg  cartel_iruña.jpg	cartel_sevilla.jpg

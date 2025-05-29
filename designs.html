@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asier Astorquiza</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">    </head>
+
+    <header>
+        <nav class="navigation">
+            <div class="nav-left-cell">
+                <ul class="menu">
+                    <li class="dropdown">Work
+                        <ul class="submenu">
+                            <li><a href="./photography.html">Photography</a></li>
+                            <li><a href="./videos.html">Videos</a></li>
+                            <li><a href="./designs.html">Designs</a></li>
+                        </ul>
+                    </li> 
+                </ul>               
+            </div>    
+            <div class="nav-center-cell">
+                <h1><a href="./index.html">ASIER ASTORQUIZA</a></h1>
+            </div>  
+            <div class="nav-right-cell">
+                <ul class="menu">
+                    <li class="dropdown">Menu
+                        <ul class="submenu">
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </li> 
+                </ul>     
+            </div>   
+        </nav>
+    </header> 
+    <body>
+            <!-- Pantalla de carga -->
+        <div id="preloader">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
+    <main>
+        <div class="container-photos" >
+            <div class="row">
+                <div class="photo-gallery" id="photo-gallery">
+                <script>
+                    const desings = [
+                    
+                    "cartel_gira_2025.jpg",
+                    "cartel_sevilla.jpg",
+                    "Cartel_gijon.jpg",
+                    "cartel_iruña.jpg",	
+                    "cartel_malaga.jpg",
+                    "CARTE_BCN.jpg"
+
+                    ];
+                
+                    const gallery = document.getElementById("photo-gallery");
+                    let rowDiv = document.createElement("div");
+                    rowDiv.classList.add("row");
+
+                    desings.forEach((desing, index) => {
+                        const colDiv = document.createElement("div");
+                        colDiv.classList.add("col-12", "col-md-6");
+                        const imgElement = document.createElement("img");
+                        imgElement.src = "assets/img/designs/" + desing;
+                        imgElement.classList.add("img-fluid");
+                        imgElement.alt = "photo-gallery";
+                        colDiv.appendChild(imgElement);
+                        rowDiv.appendChild(colDiv);
+
+                        if ((index + 1) % 2 === 0 || index === desings.length - 1) { //after 2 photos, new row
+                            gallery.appendChild(rowDiv);
+                            rowDiv = document.createElement("div");
+                            rowDiv.classList.add("row");
+                        }
+                    });
+                </script>
+                </div>
+            </div>
+        </div>
+    </main>  
+    <script src="/js/scripts.js"></script>
+    <script src="./js/photo-gallery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <footer>
+        <p>&copy; 2025 - Asier Astorquiza</p>
+    </footer>
+</body>
+
+</html>
