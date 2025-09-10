@@ -413,9 +413,6 @@ html{
     border: 0 !important;
 }
 
-.card.mb-3:hover{
-    transform: scale(1.03);
-}
 
 
 footer {
