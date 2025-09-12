@@ -40,7 +40,7 @@ elements.forEach(element => {
 
 let bannerElement= document.querySelector(".banner")
 bannerElement.addEventListener("mouseover",()=>{
-    bannerElement.style.cursor = "url('assets/img/about/puntero_circular.png') 16 16, auto";
+    bannerElement.style.cursor = "url('assets/img/about/puntero_circular.webp') 16 16, auto";
 })
 
 bannerElement.addEventListener("mouseout", () => {
